@@ -1,19 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router";
+import "./App.css";
 
-import './App.css'
-
-import { Header } from './components/Header';
-import { Main } from './components/Main';
-import { Footer } from './components/Footer';
+import { Home } from "./views/Home";
+import InstituicaoEnsino from "./views/InstituicaoEnsino";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100 bg-light">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/instituicaoensino" element={<InstituicaoEnsino />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-
-export default App
+export default App;

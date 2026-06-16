@@ -1,11 +1,13 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Image } from "react-bootstrap";
 
-export const Carrossel = ({ itensCarrossels }) => {
-
+export const Carrosel = ( props ) => {
+    
+    let itensCarrossel = props.itensCarrossel;
+    
 return (
     <Carousel>
-    {itensCarrossels.map(({ legenda, imgSrc, titulo, descricao }) => {
+    {itensCarrossel.map(({ legenda, imgSrc, titulo, descricao }, ) => {
         return (
         <Carousel.Item key={titulo}>
             <Image className="carousel-img" text={legenda} src={imgSrc} />
