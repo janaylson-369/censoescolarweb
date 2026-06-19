@@ -31,7 +31,7 @@ export const Home = () => {
             <Carrosel itensCarrossel={itens}></Carrosel    >
 
             <Row>
-            <Col>// cards do top 3 escolas
+            <Col>
                 <Container>
                 <div className="text-center mb-5">
                     <h1 className="text-primary fw-bold"> Censo escolar 2025</h1>
